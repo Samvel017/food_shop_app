@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="top">
+      <div class="header-section">
+        <div class="width-section">
+          <div class="left-side">
+            <span><i class="far fa-envelope"></i></span>
+            <span>samvelhovhannisyan250601@gmail.com</span>
+            <div class="line"></div>
+            <div class="location"></div>
+          </div>
+          <div class="right-side">
+            <div class="social-media">
+              <ul>
+                <li>
+                  <a href="#"><i class="fab fa-facebook-square"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="line"></div>
+            <div class="sign-in">
+              <button id="signInBtn">
+                <span><i class="far fa-user"></i></span><span>Login</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-nav">
+        <div class="navigation width-section">
+          <div class="logo">
+            <img src="./img/Help.png" alt="" />
+          </div>
+          <div class="nav-menu">
+            <ul>
+              <li><a href="./index.html" class="active">HOME</a></li>
+              <li><a href="#pages">PAGES</a></li>
+              <li><a href="#shop">SHOP</a></li>
+              <li><a href="#blog">BLOG</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+          </div>
+          <div class="price-box">
+            <div class="icons">
+              <i class="far fa-heart heart"
+                ><span class="count countHeart">0</span></i
+              >
+              <i class="fas fa-shopping-bag cart"
+                ><span class="count countBag">0</span></i
+              >
+            </div>
+            <div class="price">
+              <span>item: <b class="priceResult">$0.00</b></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="category-section width-section" data-aos="fade-top">
+      <div class="category-head">
+        <div class="department active">
+          <i class="fas fa-bars"></i>
+          <span>All Department</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="search">
+          <b>
+            <span>All Categories</span>
+            <span><i class="fas fa-chevron-down"></i></span>
+          </b>
+          <div class="line"></div>
+          <input
+            type="text"
+            placeholder="What do you need?"
+            id="search-users"
+          />
+          <button id="btnSearch">SEARCH</button>
+        </div>
+        <div class="contact-us">
+          <div class="tel"><i class="fas fa-phone-alt"></i></div>
+          <div class="tel-number">
+            <strong>+65 11.188.888</strong>
+            <span>support 24/7 time</span>
+          </div>
+        </div>
+      </div>
+      <div class="category-bottom active-tab">
+        <div class="category-menu">
+          <ul>
+            <li>
+              <a href="#searchResult" class="categoryNav" data-type="meat"
+                >Fresh Meat</a
+              >
+            </li>
+            <li>
+              <a href="#searchResult" class="categoryNav" data-type="fish"
+                >Fishes</a
+              >
+            </li>
+            <li>
+              <a href="#searchResult" class="categoryNav" data-type="fruit"
+                >Fruits</a
+              >
+            </li>
+            <li>
+              <a href="#searchResult" class="categoryNav" data-type="cake"
+                >Cakes</a
+              >
+            </li>
+            <li>
+              <a href="#searchResult" class="categoryNav" data-type="vegetable"
+                >Vegetables</a
+              >
+            </li>
+            <li>
+              <a href="#searchResult" class="categoryNav" data-type="salad"
+                >Salads</a
+              >
+            </li>
+            <li>
+              <a href="#searchResult" class="categoryNav" data-type="sandwich"
+                >Sandwiches</a
+              >
+            </li>
+            <li>
+              <a href="#searchResult" class="categoryNav" data-type="pizza"
+                >Pizza</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="category-main">
+          <h4>FRUIT FRESH</h4>
+          <h3>
+            Vegetable <br />
+            100% Organic
+          </h3>
+          <span>Free Pickup and Delivery Available</span>
+          <button>SHOP NOW</button>
+          <img
+            src="./img/sVwCJQc90UI8g3XF5o_uUX6kQ5lttqBp.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <div
+      class="search-section width-section"
+      id="searchResult"
+    >
+      <div class="search-title">
+        <h3>Search Result</h3>
+        <div class="line"></div>
+      </div>
+      <div class="search-result">
+        <button class="btn hide btn_loading">
+          <span class="spinner"></span>
+          <span class="btn__text">loading...</span>
+        </button>
+      </div>
+    </div>
+    <main>
+      <div class="main-section width-section">
+        <div class="banners" id="pages">
+          <div
+            class="banner"
+            data-aos="fade-right"
+            data-aos-anchor=".department"
+          >
+            <div class="banner-text">
+              <h3>Summer Fruits</h3>
+              <span>100% All Natural Fruit Juice</span>
+              <button>SHOP NOW</button>
+            </div>
+          </div>
+          <div
+            class="banner"
+            data-aos="fade-left"
+            data-aos-anchor=".department"
+          >
+            <div class="banner-text">
+              <h3>Dried & Drink Fruits</h3>
+              <span>100% All Natural Fruit Juice</span>
+              <button>SHOP NOW</button>
+            </div>
+          </div>
+        </div>
+        <div class="sliders" data-aos="fade-top" data-aos-anchor=".banner">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slider-page">
+                <h3>Latest Product</h3>
+                <div class="slider-blocks">
+                  <div class="slider-block">
+                    <img src="./img/img-slider/Rectangle 4.png" alt="" />
+                    <div class="title">
+                      <span>Cauliflower</span>
+                      <strong>$5.00</strong>
+                    </div>
+                  </div>
+                  <div class="slider-block">
+                    <img src="./img/img-slider/Rectangle 4 (1).png" alt="" />
+                    <div class="title">
+                      <span>Organic Quince</span>
+                      <strong>$7.00</strong>
+                    </div>
+                  </div>
+                  <div class="slider-block">
+                    <img src="./img/img-slider/Rectangle 4 (2).png" alt="" />
+                    <div class="title">
+                      <span>Tomato Hybrid</span>
+                      <strong>$4.00</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slider-page">
+                <h3>Top Rated Products</h3>
+                <div class="slider-blocks">
+                  <div class="slider-block">
+                    <img src="./img/img-slider/Rectangle 4 (3).png" alt="" />
+                    <div class="title">
+                      <span>Blueberry</span>
+                      <strong>$10.00</strong>
+                    </div>
+                  </div>
+                  <div class="slider-block">
+                    <img src="./img/img-slider/Rectangle 4 (4).png" alt="" />
+                    <div class="title">
+                      <span>Capsicum-Green</span>
+                      <strong>$11.00</strong>
+                    </div>
+                  </div>
+                  <div class="slider-block">
+                    <img src="./img/img-slider/Rectangle 4 (5).png" alt="" />
+                    <div class="title">
+                      <span>Pomegranate</span>
+                      <strong>$15.00</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slider-page">
+                <h3>Review Products</h3>
+                <div class="slider-blocks">
+                  <div class="slider-block">
+                    <img src="./img/img-slider/Rectangle 4 (6).png" alt="" />
+                    <div class="title">
+                      <span>Hazelnuts Filbert Nut</span>
+                      <strong>$6.00</strong>
+                    </div>
+                  </div>
+                  <div class="slider-block">
+                    <img src="./img/img-slider/Rectangle 4 (7).png" alt="" />
+                    <div class="title">
+                      <span>Green Apple</span>
+                      <strong>$8.00</strong>
+                    </div>
+                  </div>
+                  <div class="slider-block">
+                    <img src="./img/img-slider/Rectangle 4 (8).png" alt="" />
+                    <div class="title">
+                      <span>Fresh Raspberry</span>
+                      <strong>$10.00</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <div
+          class="featured-container"
+          id="shop"
+          data-aos="fade-down"
+          data-aos-anchor=".sliders"
+        >
+          <div class="title">
+            <h2>Featured Product</h2>
+            <div class="line"></div>
+          </div>
+          <div class="tab-buttons">
+            <ul>
+              <li>
+                <button class="tab-btn active-tab" data-tab="all">All</button>
+              </li>
+              <li>
+                <button class="tab-btn" data-tab="meat">Fresh Meat</button>
+              </li>
+              <li><button class="tab-btn" data-tab="pizza">Pizza</button></li>
+              <li><button class="tab-btn" data-tab="cake">Cakes</button></li>
+              <li>
+                <button class="tab-btn" data-tab="sandwich">Sandwiches</button>
+              </li>
+              <li><button class="tab-btn" data-tab="salad">Salads</button></li>
+            </ul>
+          </div>
+          <div class="tab-pages"></div>
+        </div>
+        <div class="news-section" id="blog">
+          <div class="title">
+            <h3>From The Blog</h3>
+            <div class="line"></div>
+          </div>
+          <div class="news-blocks">
+            <div class="block">
+              <div class="block-img"></div>
+              <div class="block-content">
+                <strong
+                  ><span><i class="far fa-calendar"></i> May 4,2021</span
+                  ><span><i class="far fa-comment-dots"></i> 54</span></strong
+                >
+                <h4>
+                  Busting Salad Myths: Eat a Well-Built Salad (If You Want To)
+                </h4>
+                <p>
+                  This is usually said when someone is trying to lose weight or
+                  be “super healthy.” First, to lose weight, it is widely
+                  understood that we must burn more calories than we eat.
+                  <a href="#">Read More</a>
+                </p>
+              </div>
+            </div>
+            <div class="block">
+              <div class="block-img"></div>
+              <div class="block-content">
+                <strong
+                  ><span><i class="far fa-calendar"></i> May 4,2021</span
+                  ><span><i class="far fa-comment-dots"></i> 25</span></strong
+                >
+                <h4>
+                  Vitamin C: How Much and Which Sources Are Best for Boosting
+                  Immunity?
+                </h4>
+                <p>
+                  During cold and flu season, we try to do all we can to prevent
+                  illness or speed up how fast we recover from illness. One such
+                  strategy many employ is the use of Vitamin C for a natural
+                  remedy. <a href="#">Read More</a>
+                </p>
+              </div>
+            </div>
+            <div class="block">
+              <div class="block-img"></div>
+              <div class="block-content">
+                <strong
+                  ><span><i class="far fa-calendar"></i> May 4,2021</span
+                  ><span><i class="far fa-comment-dots"></i> 58</span></strong
+                >
+                <h4>Pump Up the Produce Power in Winter Meals</h4>
+                <p>
+                  We've all been here before: When it seems the long, gray
+                  winter will never end and you make one more pot of hearty
+                  vegetable soup or another casserole; <a href="#">Read More</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="bottom">
+      <div
+        class="footer-section width-section"
+        id="contact"
+        data-aos="fade-right"
+        data-aos-anchor=".news-section"
+      >
+        <div class="logo">
+          <img src="./img/Help (1).png" alt="" />
+          <ul>
+            <li>Address: <span id="address"></span></li>
+            <li>Phone: <span>+65 11.188.888</span></li>
+            <li>Email: <span>hello@colorlib.com</span></li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>USEFUL LINK</h3>
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">About our shop</a></li>
+            <li><a href="#">Secure shopping</a></li>
+            <li><a href="#">Delivery information</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Our Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="section">
+          <h3>INFO</h3>
+          <ul>
+            <li><a href="#">WHO WE ARE</a></li>
+            <li><a href="#">OUR SERVICES</a></li>
+            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">INNOVATION</a></li>
+            <li><a href="#">TESTIMONIALS</a></li>
+          </ul>
+        </div>
+        <div class="subscribe-block">
+          <h3>Sign up for our newsletter</h3>
+          <p>get e-mail updates about our latest shop and special offers.</p>
+          <div class="input-subscribe">
+            <input type="text" placeholder="Enter Email Address" />
+            <button>SUBSCRIBE</button>
+          </div>
+          <ul class="social-media">
+            <li>
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom width-section">
+        <p>
+          Copyright ©2021 All rights reserved | This template is made with by
+          Samvel Hovhannisyan
+        </p>
+      </div>
+    </footer>
+    <div class="modalHeartBg">
+      <h2>Liked Products</h2>
+      <div class="modalHeart modal"></div>
+    </div>
+    <div class="modalCartBg">
+      <h2>Products In Cart <button id="confirm">Confirm purchase</button></h2>
+      <div class="modalCart modal"></div>
+    </div>
+    <a href="#top"
+      ><div class="arrow-up arrows"><i class="fas fa-chevron-up"></i></div
+    ></a>
+    <a href="#bottom"
+      ><div class="arrow-down arrows active">
+        <i class="fas fa-chevron-down"></i></div
+    ></a>
+    <script type="module">
+      import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js';
+      const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 500,
+      });
+
+      let arrowUp = document.querySelector('.arrow-up');
+      let arrowDown = document.querySelector('.arrow-down');
+
+      window.addEventListener('scroll', function () {
+        var x = window.pageYOffset;
+        if (x > +document.body.offsetHeight / 2) {
+          arrowUp.classList.add('active');
+          arrowDown.classList.remove('active');
+        } else if (x < +document.body.offsetHeight / 2) {
+          arrowDown.classList.add('active');
+          arrowUp.classList.remove('active');
+        } else {
+          arrowDown.classList.remove('active');
+          arrowUp.classList.remove('active');
+        }
+      });
+    </script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1200 });
+    </script>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

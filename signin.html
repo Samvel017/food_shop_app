@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./logstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="log-container">
+        <h2>Log In</h2>
+        <div class="sign-in">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email or phone number"
+            id="inputMail"
+          />
+          <input
+            type="password"
+            name="pass"
+            placeholder="Password"
+            id="inputPass"
+          />
+          <button class="btn" onclick="loc();">Log In</button>
+          <a href="#">Forgot password?</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      let mail = document.querySelector('#inputMail');
+      let pass = document.querySelector('#inputPass');
+
+      function loc() {
+        if (pass.value != '' && mail.value != '') {
+          window.location.href = './index.html';
+        } else {
+          alert('Please fill inputs!');
+        }
+      }
+    </script>
+  </body>
+</html>
